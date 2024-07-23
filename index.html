@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center min-h-screen p">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md flex flex-col h-screen">
+        <h1 class="text-3xl font-bold mb-4 text-center text-gray-800">Flashcard App</h1>
+        
+        <!-- Form Section -->
+        <div class="mb-4">
+            <input type="text" id="question" placeholder="Question" class="w-full p-3 border border-gray-300 rounded-md mb-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <input type="text" id="answer" placeholder="Answer" class="w-full p-3 border border-gray-300 rounded-md mb-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button onclick="addFlashcard()" class="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600 transition duration-300">Add Flashcard</button>
+        </div>
+
+        <!-- Flashcard List Section -->
+        <div id="flashcard-list" class="flex-grow overflow-y-auto">
+            <h2 class="text-xl font-semibold mb-2 text-gray-800">Flashcards</h2>
+            <div id="cards-container" class="space-y-4">
+                <!-- Flashcards will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
